@@ -12,3 +12,4 @@ bin           = @["triangle"]
 # Dependencies
 
 requires "nim >= 2.0.8"
+requires "naylib >= 5.1.5"
