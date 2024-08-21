@@ -5,7 +5,7 @@
 #when isMainModule:
 #  echo(getWelcomeMessage())
 
-import triangle / [draw, floats]
+import triangle / [draw, floats, matrix]
 import raylib
 
 const
@@ -22,7 +22,6 @@ proc main =
 
     beginDrawing()
     clearBackground(Black)
-    lineDraw(Float2(x: 0, y: 0), Float2(x: 10, y: 10))
     endDrawing()
 
   closeWindow()
