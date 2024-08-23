@@ -1,3 +1,4 @@
+# src\triangle\floats.nim
 type
     Float2* = ref object
         x*, y*: float32
