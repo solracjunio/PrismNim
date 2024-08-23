@@ -1,13 +1,12 @@
-import floats
+# src\triangle\draw.nim
+import floats, grid
 import raylib
-import grid
-
 
 proc characterDraw*(position: Float2) =
     let 
         x: int32 = position.x.int32 * cellSize
         y: int32 = position.y.int32 * cellSize
-    drawText("@", x, y, grid.cellSize, RayWhite)
+    drawText("@", x, y, cellSize, RayWhite)
 
 proc lineDraw*(p1, p2: Float2) =
     let
