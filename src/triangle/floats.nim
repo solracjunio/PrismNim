@@ -1,7 +1,7 @@
 # src\triangle\floats.nim
 type
     Float2* = ref object
-        x*, y*: float32
+        x*, y*: float
 
-    Float3* = ref object
-        x*, y*, z*: float32
+    Float4* = ref object
+        x*, y*, z*, w*: float
