@@ -1,17 +1,20 @@
 # src\triangle\triangleConfig.nim
 import grid, floats
 
-let triangleSize* = gridSize.float32 / 4.0
+let triangleSize*: float = gridMiddle.float / 0.3
+let p = 1.0
 
 var triangleVertices* = @[
-    Float3(x: -1,y: 1,z: -1), # 0
-    Float3(x: 1,y: 1,z: -1), # 1
-    Float3(x: 0,y: 1,z: 1), # 2
-    Float3(x: 0,y: -1,z: 0) # 3
+    Float4(x: -p,   y: p,  z: -p,  w: 1.0), # 0
+    Float4(x: p,    y: p,  z: -p,  w: 1.0), # 1
+    Float4(x: -p,   y: p,  z: p,   w: 1.0), # 2
+    Float4(x: p,    y: p,  z: p,   w: 1.0), # 3
+    Float4(x: 0.0,  y: -p, z: 0.0, w: 1.0)  # 4
 ]
 
 let triangleEdges*: seq[(int, int)] = @[
-    (0, 1), (0, 2), (0, 3),
-    (1, 2), (1, 3),
-    (2, 3)
+    (0, 1), (0, 2), (0, 4),
+    (1, 3), (1, 4),
+    (2, 3), (2, 4),
+    (3, 4)
 ]

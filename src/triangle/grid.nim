@@ -1,4 +1,5 @@
 # src\triangle\grid.nim
 const
-    cellSize*: int32 = 10
-    gridSize*: int32 = 100
+    cellSize*: int = 10
+    gridSize*: int = 100
+    gridMiddle*: int = gridSize div 2
